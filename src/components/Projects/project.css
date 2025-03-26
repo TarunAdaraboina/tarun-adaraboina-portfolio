@@ -1,0 +1,252 @@
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+/* Projects Grid */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  padding-bottom: 70px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Project Card */
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e4e7eb;
+  box-shadow: 0 4px 12px rgba(75, 108, 183, 0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(75, 108, 183, 0.15);
+}
+
+/* Project Title - Matching Home Section */
+.project-title {
+  margin-bottom: 4px;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 8px;
+  background: linear-gradient(90deg, #4b6cb7, #051AFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Project Description */
+.project-description {
+  margin-bottom: 15px;
+  color: #4a5568;
+  font-weight: 400;
+}
+
+/* Technologies Used Label */
+.technologies-used {
+  font-weight: 700;
+  color: #2d3748; /* Dark blue-gray */
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Skills Used */
+.project-skills {
+  margin-bottom: 20px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Tech Icons */
+.project-tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tech-icon {
+  font-size: 1.6rem;
+  color: #4b6cb7;
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  color: #3a56a5;
+  transform: translateY(-3px);
+}
+
+/* Project Links */
+.project-link-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.project-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #4b6cb7, #6b8cff);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(75, 108, 183, 0.2);
+}
+
+.project-link:hover {
+  background: linear-gradient(to right, #3a56a5, #5a7ae8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(75, 108, 183, 0.3);
+}
+
+.link-icon {
+  margin-right: 8px;
+}
+
+/* ===== Responsive Design ===== */
+/* Extra Small Mobile (up to 360px) */
+@media screen and (max-width: 360px) {
+  .projects-container {
+    padding: 15px;
+    padding-bottom: 50px;
+    gap: 15px;
+  }
+  
+  .project-card {
+    padding: 18px;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-description {
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+  
+  .technologies-used {
+    font-size: 0.85rem;
+  }
+  
+  .project-skills {
+    font-size: 0.8rem;
+  }
+  
+  .project-link {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .tech-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile (361px to 480px) */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .projects-container {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  
+  .technologies-used {
+    font-size: 0.9rem;
+  }
+  
+  .project-skills {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    padding-bottom: 60px;
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+  
+  .technologies-used {
+    font-size: 0.95rem;
+  }
+  
+  .project-skills {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large tablets/laptops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  
+  .technologies-used {
+    font-size: 1rem;
+  }
+}
+
+/* Desktops (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .project-title {
+    font-size: 1.3rem;
+  }
+  
+  .project-description {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  
+  .technologies-used {
+    font-size: 1.05rem;
+  }
+  
+  .project-skills {
+    font-size: 0.95rem;
+  }
+}

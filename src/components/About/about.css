@@ -1,0 +1,387 @@
+.about-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 3.5rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #f9fbfd 100%);
+  border-radius: 24px;
+  box-shadow: 
+    0 12px 24px rgba(75, 108, 183, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #4b6cb7, #6b8cff);
+}
+
+/* Typography System */
+.about-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #4b6cb7, #051AFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-weight: 700;
+  margin: 2.5rem 0 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2d3748;
+}
+
+.section-title .icon {
+  color: #4b6cb7;
+}
+
+/* Content Sections */
+.about-section {
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(235, 239, 245, 0.8);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.about-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 32px rgba(75, 108, 183, 0.12),
+    0 4px 16px rgba(75, 108, 183, 0.08);
+  border-color: rgba(107, 140, 255, 0.3);
+}
+
+/* Education Timeline */
+.education-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 7px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #e4e7eb, #6b8cff, #e4e7eb);
+}
+
+.education-item {
+  position: relative;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(75, 108, 183, 0.05);
+  border-left: 3px solid #e4e7eb;
+  transition: all 0.3s ease;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: -2.2rem;
+  top: 2.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6b8cff;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #6b8cff;
+}
+
+.education-item:hover {
+  transform: translateX(8px);
+  border-left-color: #4b6cb7;
+  box-shadow: 0 6px 16px rgba(75, 108, 183, 0.1);
+}
+
+/* Skills Matrix */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(75, 108, 183, 0.05);
+}
+
+.skill-category h4 {
+  color: #4b6cb7;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  padding: 0.5rem 0;
+  color: #4a5568;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.skill-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6b8cff;
+  font-weight: bold;
+}
+
+/* Tools Showcase */
+.tools-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tool-pill {
+  background: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  color: #4b6cb7;
+  border: 1px solid #e4e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.tool-pill:hover {
+  background: #f8fafc;
+  color: #3a56a5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(75, 108, 183, 0.1);
+  border-color: #d1d9e6;
+}
+
+/* CTA Section */
+.download-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #4b6cb7, #6b8cff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 16px rgba(75, 108, 183, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 24px rgba(75, 108, 183, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #3a56a5, #5a7ae8);
+}
+
+
+@media screen and (max-width: 360px) {
+  .about-container {
+    padding: 1.5rem 1rem;
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+  
+  .about-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-title::after {
+    width: 50px;
+    height: 3px;
+    bottom: -8px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .about-section {
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .education-item {
+    padding: 1.2rem;
+  }
+}
+
+/* Small Mobile (361px to 480px) */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .about-container {
+    padding: 1.8rem 1.2rem;
+    margin: 2.5rem auto;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    margin: 2rem 0 1.2rem;
+  }
+  
+  .about-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem 2rem;
+    margin: 3rem auto;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin: 2.2rem 0 1.5rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* Large tablets/laptops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-container {
+    padding: 1.5rem 2.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Desktops (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+.about-description {
+  color: #64748b;
+  font-weight: 400; /* Base weight */
+  line-height: 1.7; /* Optimal for readability */
+}
+
+/* Extra Small Mobile (up to 360px) */
+@media screen and (max-width: 360px) {
+  .about-description {
+    font-size: 0.85rem;
+    line-height: 1.6; /* Tighter on small screens */
+  }
+}
+
+/* Small Mobile (361px to 480px) */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .about-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about-description {
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+}
+
+/* Large tablets/laptops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
+/* Desktops (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .about-description {
+    font-size: 1.05rem;
+    font-weight: 400;
+  }
+}
+
+/* Special cases for very large screens */
+@media screen and (min-width: 1440px) {
+  .about-description {
+    font-size: 1.1rem;
+  }
+}
